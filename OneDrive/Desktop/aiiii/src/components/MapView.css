@@ -78,6 +78,28 @@
     font-size: 11px;
 }
 
+/* Animated marker pulse effect */
+@keyframes marker-pulse {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.marker-pin:hover {
+    animation: marker-pulse 0.6s ease-in-out;
+}
+
 /* Map Popup */
 .map-popup {
     padding: var(--spacing-sm);
