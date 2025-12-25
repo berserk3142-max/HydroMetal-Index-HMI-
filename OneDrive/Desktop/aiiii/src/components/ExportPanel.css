@@ -1,0 +1,55 @@
+/* Export Panel Styles */
+.export-panel {
+    margin-top: var(--spacing-xl);
+}
+
+.export-panel h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.export-panel>p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.export-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.export-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    text-align: left;
+}
+
+.export-icon {
+    font-size: 2rem;
+}
+
+.export-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.export-text strong {
+    font-size: 1rem;
+}
+
+.export-text small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .export-buttons {
+        grid-template-columns: 1fr;
+    }
+}
