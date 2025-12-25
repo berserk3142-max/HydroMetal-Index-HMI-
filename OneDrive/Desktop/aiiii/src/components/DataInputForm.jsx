@@ -44,6 +44,16 @@ function DataInputForm({ onCalculate, onFileUpload }) {
             newErrors.general = 'Please enter at least one metal concentration';
         }
 
+        // Validate concentration values are within reasonable range
+        Object.entries(concentrations).forEach(([metal, value]) => {
+            if (value !== '' && parseFloat(value) < 0) {
+                newErrors[metal] = 'Concentration cannot be negative';
+            }
+            if (value !== '' && parseFloat(value) > 100) {
+                newErrors[metal] = 'Concentration seems unusually high';
+            }
+        });
+
         // Validate coordinates if provided
         if (sampleInfo.latitude && (parseFloat(sampleInfo.latitude) < -90 || parseFloat(sampleInfo.latitude) > 90)) {
             newErrors.latitude = 'Invalid latitude (-90 to 90)';
@@ -55,6 +65,7 @@ function DataInputForm({ onCalculate, onFileUpload }) {
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
