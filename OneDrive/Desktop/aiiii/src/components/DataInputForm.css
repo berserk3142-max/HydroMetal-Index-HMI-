@@ -1,0 +1,143 @@
+/* Data Input Form Styles */
+.data-input-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.input-options {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.error-banner {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--danger);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.input-error {
+    border-color: var(--danger) !important;
+}
+
+.error-text {
+    color: var(--danger);
+    font-size: 0.75rem;
+    margin-top: var(--spacing-xs);
+}
+
+/* Metals Input Grid */
+.metals-input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.metal-input-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    transition: all var(--transition-fast);
+}
+
+.metal-input-card:hover {
+    border-color: var(--accent-primary);
+}
+
+.metal-input-card:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.metal-input-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.metal-symbol-input {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metal-name-input {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.metal-input {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: var(--spacing-sm);
+}
+
+.metal-limit-hint {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: var(--spacing-sm);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+    .input-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .metals-input-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
